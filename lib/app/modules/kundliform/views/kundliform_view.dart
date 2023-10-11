@@ -81,43 +81,46 @@ class KundliformView extends GetView<KundliformController> {
                     height: 5,
                   ),
 
-                  Container(
+                  SizedBox(
+                    height: 40,
                     width: double.infinity,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          height: 40,
-                          width: 170,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.orange, width: 2),
-                            borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(
-                                  8.0,
-                                ),
-                                bottomLeft: Radius.circular(8.0)),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "Male",
-                            style: TextStyle(fontSize: 15),
-                          )),
-                        ),
-                        Container(
-                          height: 40,
-                          width: 170,
-                          decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                  bottomRight: Radius.circular(
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.orange, width: 2),
+                              borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(
                                     8.0,
                                   ),
-                                  topRight: Radius.circular(8.0)),
-                              color: Colors.orange),
-                          child: const Center(
-                              child: Text(
-                            "Female",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          )),
+                                  bottomLeft: Radius.circular(8.0)),
+                            ),
+                            child: const Center(
+                                child: Text(
+                                  "Male",
+                                  style: TextStyle(fontSize: 15),
+                                )),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(
+                                      8.0,
+                                    ),
+                                    topRight: Radius.circular(8.0)),
+                                color: Colors.orange),
+                            child: const Center(
+                                child: Text(
+                                  "Female",
+                                  style: TextStyle(fontSize: 15, color: Colors.white),
+                                )),
+                          ),
                         ),
                       ],
                     ),
