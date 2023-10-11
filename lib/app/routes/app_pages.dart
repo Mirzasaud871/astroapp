@@ -34,7 +34,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.MATCHING,
-      page: () => const MatchingView(),
+      page: () =>  MatchingView(),
       binding: MatchingBinding(),
     ),
   ];

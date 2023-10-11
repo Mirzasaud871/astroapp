@@ -14,7 +14,7 @@ class KundliformView extends GetView<KundliformController> {
             onPressed: () {
               Get.back();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
             )),
@@ -23,8 +23,8 @@ class KundliformView extends GetView<KundliformController> {
           style: TextStyle(color: Colors.black, fontSize: 18),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 15.0),
+          const Padding(
+            padding: EdgeInsets.only(right: 15.0),
             child: Icon(
               Icons.history,
               color: Colors.black,
@@ -44,16 +44,16 @@ class KundliformView extends GetView<KundliformController> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     "Name",
                     style: TextStyle(
                       fontSize: 15,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Container(
@@ -63,71 +63,75 @@ class KundliformView extends GetView<KundliformController> {
                         border: Border.all(color: Colors.orange, width: 2)),
                     width: double.infinity,
                     child: TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         focusedBorder: InputBorder.none,
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Text(
+                  const Text(
                     "Gender",
                     style: TextStyle(
                       fontSize: 15,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 170,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.orange, width: 2),
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(
-                                8.0,
-                              ),
-                              bottomLeft: Radius.circular(8.0)),
-                        ),
-                        child: Center(
-                            child: Text(
-                          "Male",
-                          style: TextStyle(fontSize: 15),
-                        )),
-                      ),
-                      Container(
-                        height: 40,
-                        width: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(
+
+                  Container(
+                    width: double.infinity,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 170,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.orange, width: 2),
+                            borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(
                                   8.0,
                                 ),
-                                topRight: Radius.circular(8.0)),
-                            color: Colors.orange),
-                        child: Center(
-                            child: Text(
-                          "Female",
-                          style: TextStyle(fontSize: 15, color: Colors.white),
-                        )),
-                      ),
-                    ],
+                                bottomLeft: Radius.circular(8.0)),
+                          ),
+                          child: const Center(
+                              child: Text(
+                            "Male",
+                            style: TextStyle(fontSize: 15),
+                          )),
+                        ),
+                        Container(
+                          height: 40,
+                          width: 170,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(
+                                    8.0,
+                                  ),
+                                  topRight: Radius.circular(8.0)),
+                              color: Colors.orange),
+                          child: const Center(
+                              child: Text(
+                            "Female",
+                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          )),
+                        ),
+                      ],
+                    ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Text(
+                  const Text(
                     "Date of Birth",
                     style: TextStyle(
                       fontSize: 15,
                     ),
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   InkWell(
                     onTap: () {
                       kundliformController.ChooseDate();
@@ -145,23 +149,23 @@ class KundliformView extends GetView<KundliformController> {
                                   .format(
                                       kundliformController.selectedDate.value)
                                   .toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 15,
                               ),
                             ),
                           )),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Text(
+                  const Text(
                     "Time of Birth",
                     style: TextStyle(
                       fontSize: 15,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   InkWell(
@@ -179,23 +183,23 @@ class KundliformView extends GetView<KundliformController> {
                             child: Text(
                               "${kundliformController.selectedTime.value.hour}"
                               ":${kundliformController.selectedTime.value.minute}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 15,
                               ),
                             ),
                           )),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Text(
+                  const Text(
                     "Place of Birth",
                     style: TextStyle(
                       fontSize: 15,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Container(
@@ -204,15 +208,15 @@ class KundliformView extends GetView<KundliformController> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(color: Colors.orange, width: 2)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 4.0, left: 5.0),
+                    child: const Padding(
+                      padding: EdgeInsets.only(top: 4.0, left: 5.0),
                       child: Text(
                         "Ujjain",
                         style: TextStyle(fontSize: 15, letterSpacing: 1),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
                   Container(
@@ -221,8 +225,8 @@ class KundliformView extends GetView<KundliformController> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(color: Colors.orange, width: 2)),
-                    child: Padding(
-                        padding: const EdgeInsets.only(top: 4.0, left: 2.0),
+                    child: const Padding(
+                        padding: EdgeInsets.only(top: 4.0, left: 2.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -232,13 +236,13 @@ class KundliformView extends GetView<KundliformController> {
                             ),
                             Spacer(),
                             Padding(
-                              padding: const EdgeInsets.only(right: 8.0),
+                              padding: EdgeInsets.only(right: 8.0),
                               child: Icon(Icons.arrow_forward_ios_outlined),
                             )
                           ],
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   Container(
@@ -251,7 +255,7 @@ class KundliformView extends GetView<KundliformController> {
                         elevation: 0,
                         backgroundColor: Colors.orange,
                         onPressed: () {},
-                        label: Text(
+                        label: const Text(
                           "Show Kundli",
                           style: TextStyle(fontSize: 16),
                         )),
