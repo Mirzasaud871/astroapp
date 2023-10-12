@@ -20,7 +20,7 @@ class KundliformController extends GetxController {
         builder: (context , child) => Theme(
             child: child!,
           data: ThemeData(
-              colorScheme: ColorScheme.light(
+              colorScheme: const ColorScheme.light(
                 onSurface: Colors.black,
                 surface: Colors.orange,
                 primary: Colors.orange
@@ -41,7 +41,7 @@ class KundliformController extends GetxController {
         builder: (context , child) => Theme(
           child: child!,
           data: ThemeData(
-              colorScheme: ColorScheme.light(
+              colorScheme: const ColorScheme.light(
                   onSurface: Colors.black,
                   primary: Colors.orange
               )

@@ -4,6 +4,8 @@ import '../modules/drawer/bindings/drawer_binding.dart';
 import '../modules/drawer/views/drawer_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/horoscope/bindings/horoscope_binding.dart';
+import '../modules/horoscope/views/horoscope_view.dart';
 import '../modules/kundliform/bindings/kundliform_binding.dart';
 import '../modules/kundliform/views/kundliform_view.dart';
 import '../modules/matching/bindings/matching_binding.dart';
@@ -34,8 +36,13 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.MATCHING,
-      page: () =>  MatchingView(),
+      page: () => MatchingView(),
       binding: MatchingBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOROSCOPE,
+      page: () => HoroscopeView(),
+      binding: HoroscopeBinding(),
     ),
   ];
 }

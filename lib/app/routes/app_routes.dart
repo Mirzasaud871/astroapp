@@ -7,6 +7,7 @@ abstract class Routes {
   static const DRAWER = _Paths.DRAWER;
   static const KUNDLIFORM = _Paths.KUNDLIFORM;
   static const MATCHING = _Paths.MATCHING;
+  static const HOROSCOPE = _Paths.HOROSCOPE;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const DRAWER = '/drawer';
   static const KUNDLIFORM = '/kundliform';
   static const MATCHING = '/matching';
+  static const HOROSCOPE = '/horoscope';
 }

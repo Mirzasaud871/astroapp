@@ -19,7 +19,7 @@ class HomeView extends GetView<HomeController> {
           'Astrotalk',
           style: TextStyle(color: Colors.black),
         ),
-        actions: [
+        actions: const [
           Icon(
             Icons.account_balance_wallet,
             size: 30,
@@ -78,9 +78,9 @@ class HomeView extends GetView<HomeController> {
                 ],
               ),
 
-              Container(
+              SizedBox(
                 width: double.infinity,
-                height: 600,
+                height: 270,
                 child: GridView.builder(
                   itemCount: homeController.homeList.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -91,7 +91,7 @@ class HomeView extends GetView<HomeController> {
                         Get.toNamed(homeController.homeList[index].route);
                       },
                       child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                               ),
                           margin: const EdgeInsets.all(02.0),
@@ -107,7 +107,7 @@ class HomeView extends GetView<HomeController> {
                                 padding: const EdgeInsets.only(bottom: 6.0,),
                                 child: Align(
                                   alignment: Alignment.bottomCenter,
-                                  child: Text(homeController.homeList[index].name,style: TextStyle(fontSize: 14),textAlign: TextAlign.center,),
+                                  child: Text(homeController.homeList[index].name,style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
                                 ),
                               )
                             ],
@@ -117,19 +117,63 @@ class HomeView extends GetView<HomeController> {
                 ),
               ),
 
-              // SizedBox(
-              //     child: GridView.builder(
-              //   itemCount: homeController.imageGrid.length,
-              //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              //       crossAxisCount: 2,
-              //       crossAxisSpacing: 4.0,
-              //       mainAxisSpacing: 4.0),
-              //   itemBuilder: (BuildContext context, int index) {
-              //     return Image.network(homeController.imageGrid[index]);
-              //   },
-              // )),
-
               SizedBox(
+                child: Center(
+                  child:
+                  ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset("assets/images/panchangg.jpg",height: 130,)),),
+              ),
+              SizedBox(height: 10,),
+              SizedBox(
+                child: Center(
+                  child:
+                  ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset("assets/images/chaughadiya.jpg",height: 130,)),),
+              ),
+
+              const SizedBox(height: 10,),
+              SizedBox(
+                width: double.infinity,
+                height: 135,
+                child: GridView.builder(
+                  itemCount: homeController.homelistsecond.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,childAspectRatio: 0.9,),
+                  itemBuilder: (BuildContext context, int index) {
+                    return InkWell(
+                      onTap: (){
+                        Get.toNamed(homeController.homelistsecond[index].route);
+                      },
+                      child: Container(
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                          ),
+                          margin: const EdgeInsets.all(02.0),
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 20.0),
+                                child: Align(
+                                    alignment: Alignment.topCenter,
+                                    child: Image.asset(homeController.homelistsecond[index].image,height: 55,color:Color(0xffFF6F00),)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 6.0,),
+                                child: Align(
+                                  alignment: Alignment.bottomCenter,
+                                  child: Text(homeController.homelistsecond[index].name,style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
+                                ),
+                              )
+                            ],
+                          )),
+                    );
+                  },
+                ),
+              ),
+
+              const SizedBox(
                 height: 100,
               )
             ],

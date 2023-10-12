@@ -16,14 +16,14 @@ class MatchingView extends GetView<MatchingController> {
           Get.toNamed("/home");
         },
         child: Container(
-          margin: EdgeInsets.all(10.0),
+          margin: const EdgeInsets.all(10.0),
           width: double.infinity,
           height: 50,
           decoration: BoxDecoration(
             color: Colors.orange,
             borderRadius: BorderRadius.circular(10.0)
           ),
-          child: Center(child: Text("Show Kundli",style: TextStyle(fontSize: 16, color: Colors.white),)),
+          child: const Center(child: Text("Show Kundli",style: TextStyle(fontSize: 16, color: Colors.white),)),
         ),
       ),
       appBar: AppBar(
@@ -31,7 +31,7 @@ class MatchingView extends GetView<MatchingController> {
             onPressed: () {
               Get.back();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios_new,
               color: Colors.black,
             )),
@@ -40,9 +40,9 @@ class MatchingView extends GetView<MatchingController> {
           'Matching',
           style: TextStyle(color: Colors.black, fontSize: 18),
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 15.0),
+            padding: EdgeInsets.only(right: 15.0),
             child: Icon(
               Icons.history,
               color: Colors.black,
@@ -61,17 +61,17 @@ class MatchingView extends GetView<MatchingController> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Text(
+                      const Text(
                         "Boy's Name",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       Container(
@@ -81,23 +81,23 @@ class MatchingView extends GetView<MatchingController> {
                             border: Border.all(color: Colors.orange, width: 2)),
                         width: double.infinity,
                         child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             focusedBorder: InputBorder.none,
                           ),
                         ),
                       ),
 
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
-                      Text(
+                      const Text(
                         "Date of Birth",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       InkWell(
                         onTap: () {
                           matchingController.ChooseDate();
@@ -115,24 +115,24 @@ class MatchingView extends GetView<MatchingController> {
                                   .format(
                                   matchingController.selectedDate.value)
                                   .toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 15,
                               ),
                             ),
                           )),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
-                      Text(
+                      const Text(
                         "Time of Birth",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       InkWell(
@@ -150,24 +150,24 @@ class MatchingView extends GetView<MatchingController> {
                             child: Text(
                               "${matchingController.selectedTime.value.hour}"
                                   ":${matchingController.selectedTime.value.minute}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 15,
                               ),
                             ),
                           )),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
-                      Text(
+                      const Text(
                         "Place of Birth",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       Container(
@@ -176,15 +176,15 @@ class MatchingView extends GetView<MatchingController> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(color: Colors.orange, width: 2)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 4.0, left: 5.0),
+                        child: const Padding(
+                          padding: EdgeInsets.only(top: 4.0, left: 5.0),
                           child: Text(
                             "Ujjain",
                             style: TextStyle(fontSize: 15, letterSpacing: 1),
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
                       Container(
@@ -193,8 +193,8 @@ class MatchingView extends GetView<MatchingController> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(color: Colors.orange, width: 2)),
-                        child: Padding(
-                            padding: const EdgeInsets.only(top: 4.0, left: 2.0),
+                        child: const Padding(
+                            padding: EdgeInsets.only(top: 4.0, left: 2.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -204,28 +204,28 @@ class MatchingView extends GetView<MatchingController> {
                                 ),
                                 Spacer(),
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 8.0),
+                                  padding: EdgeInsets.only(right: 8.0),
                                   child: Icon(Icons.arrow_forward_ios_outlined),
                                 )
                               ],
                             )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
 
                       //Giiiiiiiiiiiiiiiirrrrrrrrrrrrllllllllllllllllllllsssssssssssss
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Text(
+                      const Text(
                         "Girl's Name",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       Container(
@@ -235,23 +235,23 @@ class MatchingView extends GetView<MatchingController> {
                             border: Border.all(color: Colors.orange, width: 2)),
                         width: double.infinity,
                         child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             focusedBorder: InputBorder.none,
                           ),
                         ),
                       ),
 
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
-                      Text(
+                      const Text(
                         "Date of Birth",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       InkWell(
                         onTap: () {
                           matchingController.ChooseDate();
@@ -269,24 +269,24 @@ class MatchingView extends GetView<MatchingController> {
                                   .format(
                                   matchingController.selectedDate.value)
                                   .toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 15,
                               ),
                             ),
                           )),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
-                      Text(
+                      const Text(
                         "Time of Birth",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       InkWell(
@@ -304,24 +304,24 @@ class MatchingView extends GetView<MatchingController> {
                             child: Text(
                               "${matchingController.selectedTime.value.hour}"
                                   ":${matchingController.selectedTime.value.minute}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 15,
                               ),
                             ),
                           )),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
-                      Text(
+                      const Text(
                         "Place of Birth",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       Container(
@@ -330,15 +330,15 @@ class MatchingView extends GetView<MatchingController> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(color: Colors.orange, width: 2)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 4.0, left: 5.0),
+                        child: const Padding(
+                          padding: EdgeInsets.only(top: 4.0, left: 5.0),
                           child: Text(
                             "Ujjain",
                             style: TextStyle(fontSize: 15, letterSpacing: 1),
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
                       Container(
@@ -347,8 +347,8 @@ class MatchingView extends GetView<MatchingController> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(color: Colors.orange, width: 2)),
-                        child: Padding(
-                            padding: const EdgeInsets.only(top: 4.0, left: 2.0),
+                        child: const Padding(
+                            padding: EdgeInsets.only(top: 4.0, left: 2.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -358,13 +358,13 @@ class MatchingView extends GetView<MatchingController> {
                                 ),
                                 Spacer(),
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 8.0),
+                                  padding: EdgeInsets.only(right: 8.0),
                                   child: Icon(Icons.arrow_forward_ios_outlined),
                                 )
                               ],
                             )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 80,
                       ),
 
