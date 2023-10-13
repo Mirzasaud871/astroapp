@@ -20,7 +20,7 @@ class HomeController extends GetxController {
     HomeList(image: "assets/images/icons/ic_match.png", name: "Matching", route: "/matching"),
     HomeList(image: "assets/images/icons/ic_prediction.png", name: "PDF Kundli", route: "/horoscope"),
     HomeList(image: "assets/images/icons/ic_asc.png", name: "Jyotish Paramarsh", route: "route"),
-    HomeList(image: "assets/images/icons/ic_dasa.png", name: "Shubh Muhrat", route: "route"),
+      HomeList(image: "assets/images/icons/ic_dasa.png", name: "Shubh Muhrat", route: "route"),
     HomeList(image: "assets/images/icons/ic_celebrity.png", name: "Horoscope", route: "route"),
     // HomeList(image: "assets/images/icons/ic_chinese.png", name: "Chinese Astrology", route: "route"),
     // HomeList(image: "assets/images/icons/ic_clock.png", name: "Today's Rahukaal", route: "route"),

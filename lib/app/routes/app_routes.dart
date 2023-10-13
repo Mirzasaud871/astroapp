@@ -8,6 +8,7 @@ abstract class Routes {
   static const KUNDLIFORM = _Paths.KUNDLIFORM;
   static const MATCHING = _Paths.MATCHING;
   static const HOROSCOPE = _Paths.HOROSCOPE;
+  static const CALENDAR = _Paths.CALENDAR;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const KUNDLIFORM = '/kundliform';
   static const MATCHING = '/matching';
   static const HOROSCOPE = '/horoscope';
+  static const CALENDAR = '/calendar';
 }

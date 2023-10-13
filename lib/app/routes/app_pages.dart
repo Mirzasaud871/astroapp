@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/calendar/bindings/calendar_binding.dart';
+import '../modules/calendar/views/calendar_view.dart';
 import '../modules/drawer/bindings/drawer_binding.dart';
 import '../modules/drawer/views/drawer_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.HOROSCOPE,
       page: () => HoroscopeView(),
       binding: HoroscopeBinding(),
+    ),
+    GetPage(
+      name: _Paths.CALENDAR,
+      page: () => CalendarView(),
+      binding: CalendarBinding(),
     ),
   ];
 }

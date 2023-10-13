@@ -51,6 +51,7 @@ class KundliformView extends GetView<KundliformController> {
                     "Name",
                     style: TextStyle(
                       fontSize: 15,
+                      fontWeight: FontWeight.bold
                     ),
                   ),
                   const SizedBox(
@@ -75,6 +76,7 @@ class KundliformView extends GetView<KundliformController> {
                     "Gender",
                     style: TextStyle(
                       fontSize: 15,
+                        fontWeight: FontWeight.bold
                     ),
                   ),
                   const SizedBox(
@@ -132,6 +134,7 @@ class KundliformView extends GetView<KundliformController> {
                     "Date of Birth",
                     style: TextStyle(
                       fontSize: 15,
+                        fontWeight: FontWeight.bold
                     ),
                   ),
                   const SizedBox(height: 5),
@@ -165,6 +168,7 @@ class KundliformView extends GetView<KundliformController> {
                   const Text(
                     "Time of Birth",
                     style: TextStyle(
+                      fontWeight: FontWeight.bold,
                       fontSize: 15,
                     ),
                   ),
@@ -200,6 +204,7 @@ class KundliformView extends GetView<KundliformController> {
                     "Place of Birth",
                     style: TextStyle(
                       fontSize: 15,
+                        fontWeight: FontWeight.bold
                     ),
                   ),
                   const SizedBox(
@@ -235,7 +240,7 @@ class KundliformView extends GetView<KundliformController> {
                           children: [
                             Text(
                               " Setting",
-                              style: TextStyle(fontSize: 15, letterSpacing: 1),
+                              style: TextStyle(fontSize: 15, letterSpacing: 1,fontWeight: FontWeight.bold),
                             ),
                             Spacer(),
                             Padding(
