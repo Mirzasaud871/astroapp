@@ -14,7 +14,7 @@ class HomeView extends GetView<HomeController> {
       ),
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.black),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.amber ,
         title: const Text(
           'AstroRobo',
           style: TextStyle(color: Colors.black,fontSize: 18),
@@ -41,25 +41,35 @@ class HomeView extends GetView<HomeController> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              CarouselSlider(
-                items: homeController.imagelist
-                    .map(
-                      (item) => Image.asset(
-                        item['imagePath'],
-                        fit: BoxFit.fill,
-                        width: double.infinity,
-                      ),
-                    )
-                    .toList(),
-                carouselController: homeController.carouselController,
-                options: CarouselOptions(
-                  scrollPhysics: const BouncingScrollPhysics(),
-                  autoPlay: true,
-                  aspectRatio: 5,
-                  viewportFraction: 1,
-                  onPageChanged: (index, reason) {
-                    homeController.currentindex.value = index;
-                  },
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey.shade400),
+                  borderRadius: BorderRadius.circular(10.0)
+                ),
+                margin: EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: CarouselSlider(
+                    items: homeController.imagelist
+                        .map(
+                          (item) => Image.asset(
+                            item['imagePath'],
+                            fit: BoxFit.fill,
+                            width: double.infinity,
+                          ),
+                        )
+                        .toList(),
+                    carouselController: homeController.carouselController,
+                    options: CarouselOptions(
+                      scrollPhysics: const BouncingScrollPhysics(),
+                      autoPlay: true,
+                      aspectRatio: 2.5,
+                      viewportFraction: 1,
+                      onPageChanged: (index, reason) {
+                        homeController.currentindex.value = index;
+                      },
+                    ),
+                  ),
                 ),
               ),
 
@@ -113,14 +123,16 @@ class HomeView extends GetView<HomeController> {
                       margin: EdgeInsets.all(2.0),
                       height: 130,
                       width: 115,
-                    color: Colors.white,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey.shade300)
+                    ),
                     child: Stack(
                                children: [
                                      Padding(
                                        padding: const EdgeInsets.only(top: 2.0),
                                        child: Align(
                                            alignment: Alignment.topCenter,
-                                           child: Image.asset("assets/images/icons/ic_kundli.png",height: 80,)),
+                                           child: Image.asset("assets/images/icons/ic_kundli.png",height: 80)),
                                      ),
                                      Padding(
                                       padding: const EdgeInsets.only(bottom: 5.0,),
@@ -140,14 +152,16 @@ class HomeView extends GetView<HomeController> {
                       margin: EdgeInsets.all(2.0),
                       height: 130,
                       width: 115,
-                      color: Colors.white,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       child: Stack(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(top: 2.0),
                             child: Align(
                                 alignment: Alignment.topCenter,
-                                child: Image.asset("assets/images/icons/ic_match.png",height: 80,)),
+                                child: Image.asset("assets/images/icons/ic_match.png",height: 80,color: Colors.orange,)),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 5.0,),
@@ -167,14 +181,16 @@ class HomeView extends GetView<HomeController> {
                     margin: EdgeInsets.all(2.0),
                       height: 130,
                       width: 115,
-                      color: Colors.white,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       child: Stack(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(top: 2.0),
                             child: Align(
                                 alignment: Alignment.topCenter,
-                                child: Image.asset("assets/images/icons/ic_prediction.png",height: 80,)),
+                                child: Image.asset("assets/images/icons/ic_prediction.png",height: 80,color: Colors.orange,)),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 5.0,),
@@ -198,14 +214,16 @@ class HomeView extends GetView<HomeController> {
                         margin: EdgeInsets.all(2.0),
                         height: 130,
                         width: 115,
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         child: Stack(
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(top: 2.0),
                               child: Align(
                                   alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/ic_asc.png",height: 80,)),
+                                  child: Image.asset("assets/images/icons/ic_asc.png",height: 80,color: Colors.orange,)),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 5.0,),
@@ -225,14 +243,16 @@ class HomeView extends GetView<HomeController> {
                         margin: EdgeInsets.all(2.0),
                         height: 130,
                         width: 115,
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         child: Stack(
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(top: 2.0),
                               child: Align(
                                   alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/ic_dasa.png",height: 80,)),
+                                  child: Image.asset("assets/images/icons/ic_dasa.png",height: 80,color: Colors.orange,)),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 5.0,),
@@ -252,14 +272,16 @@ class HomeView extends GetView<HomeController> {
                         margin: EdgeInsets.all(2.0),
                         height: 130,
                         width: 115,
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         child: Stack(
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(top: 2.0),
                               child: Align(
                                   alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/ic_celebrity.png",height: 80,)),
+                                  child: Image.asset("assets/images/icons/ic_celebrity.png",height: 80,color: Colors.orange,)),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 5.0,),
@@ -274,21 +296,26 @@ class HomeView extends GetView<HomeController> {
                 ],),
               SizedBox(height: 15,),
 
-              SizedBox(
-                child: Center(
-                  child:
-                  ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset("assets/images/panchangg.jpg",height: 130,)),),
-              ),
-              SizedBox(height: 10,),
-              SizedBox(
-                child: Center(
-                  child:
-                  ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset("assets/images/chaughadiya.jpg",height: 130,)),),
-              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                SizedBox(
+                  child: Center(
+                    child:
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset("assets/images/panchang.jpg",height: 90,)),),
+                ),
+                SizedBox(width: 6,),
+                SizedBox(
+                  child: Center(
+                    child:
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset("assets/images/choghadiya.png",height:90,)),),
+                ),
+              ],),
+
               SizedBox(height:15,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -301,14 +328,16 @@ class HomeView extends GetView<HomeController> {
                         margin: EdgeInsets.all(2.0),
                         height: 130,
                         width: 115,
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         child: Stack(
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(top: 5.0),
                               child: Align(
                                   alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/calendar.png",height: 60,color: Color(0xffFF6F00),)),
+                                  child: Image.asset("assets/images/icons/calendar.png",height: 60,color:Colors.orange)),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 5.0,),
@@ -324,14 +353,16 @@ class HomeView extends GetView<HomeController> {
                       margin: EdgeInsets.all(2.0),
                       height: 130,
                       width: 115,
-                      color: Colors.white,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       child: Stack(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(top: 5.0),
                             child: Align(
                                 alignment: Alignment.topCenter,
-                                child: Image.asset("assets/images/icons/vrat.png",height: 60,color: Color(0xffFF6F00))),
+                                child: Image.asset("assets/images/icons/vrat.png",height: 60,color:Colors.orange)),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 5.0,),
@@ -346,22 +377,23 @@ class HomeView extends GetView<HomeController> {
                       margin: EdgeInsets.all(2.0),
                       height: 130,
                       width: 115,
-                      color: Colors.white,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       child: Stack(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(top: 5.0),
                             child: Align(
                                 alignment: Alignment.topCenter,
-                                child: Image.asset("assets/images/icons/katha.png",height: 60,color: Color(0xffFF6F00))),
+                                child: Image.asset("assets/images/icons/katha.png",height: 60,color: Colors.orange)),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 5.0,),
                             child: Align(
                               alignment: Alignment.bottomCenter,
-                              child: Text("Vrat\n Katha",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
+                              child: Text("Vrat\n Katha",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,))
                             ),
-                          )
                         ],
                       )),
                 ],),

@@ -7,10 +7,11 @@ import '../model/home_model.dart';
 class HomeController extends GetxController {
   //TODO: Implement HomeController
   List imagelist = [
-    {"id" : 1 , "imagePath" : "assets/images/web-bn-en.jpg"},
-    {"id" : 2 , "imagePath" : "assets/images/top-followed-astrologer-en.jpg"},
-    {"id" : 3 , "imagePath" : "assets/images/web-boost1-en.jpg"},
-    {"id" : 4 , "imagePath" : "assets/images/web-bk1-en.jpg"},
+    {"id" : 1 , "imagePath" : "assets/images/panchangg.jpg"},
+    {"id" : 2 , "imagePath" : "assets/images/chaughadiya.jpg"},
+    // {"id" : 3 , "imagePath" : "assets/images/images .jpg"},
+    // {"id" : 3 , "imagePath" : "assets/images/Astrology-banner.jpg"},
+    // {"id" : 4 , "imagePath" : "assets/images/web-bk1-en.jpg"},
   ];
   final CarouselController carouselController = CarouselController();
   var currentindex = 0.obs;
