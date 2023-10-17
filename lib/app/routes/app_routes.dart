@@ -9,6 +9,8 @@ abstract class Routes {
   static const MATCHING = _Paths.MATCHING;
   static const HOROSCOPE = _Paths.HOROSCOPE;
   static const CALENDAR = _Paths.CALENDAR;
+  static const PANCHANG = _Paths.PANCHANG;
+  static const CHAUGHADIYA = _Paths.CHAUGHADIYA;
 }
 
 abstract class _Paths {
@@ -19,4 +21,6 @@ abstract class _Paths {
   static const MATCHING = '/matching';
   static const HOROSCOPE = '/horoscope';
   static const CALENDAR = '/calendar';
+  static const PANCHANG = '/panchang';
+  static const CHAUGHADIYA = '/chaughadiya';
 }

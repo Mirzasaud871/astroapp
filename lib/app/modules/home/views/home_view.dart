@@ -221,7 +221,7 @@ class HomeView extends GetView<HomeController> {
                       flex: 1,
                       child: InkWell(
                         onTap: (){
-                          Get.toNamed("/kundliform");
+                          Get.toNamed("/panchang");
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
@@ -247,7 +247,7 @@ class HomeView extends GetView<HomeController> {
                       flex: 1,
                       child: InkWell(
                         onTap: (){
-                          Get.toNamed("/kundliform");
+                          Get.toNamed("/chaughadiya");
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),

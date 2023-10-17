@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/calendar/bindings/calendar_binding.dart';
 import '../modules/calendar/views/calendar_view.dart';
+import '../modules/chaughadiya/bindings/chaughadiya_binding.dart';
+import '../modules/chaughadiya/views/chaughadiya_view.dart';
 import '../modules/drawer/bindings/drawer_binding.dart';
 import '../modules/drawer/views/drawer_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -12,6 +14,8 @@ import '../modules/kundliform/bindings/kundliform_binding.dart';
 import '../modules/kundliform/views/kundliform_view.dart';
 import '../modules/matching/bindings/matching_binding.dart';
 import '../modules/matching/views/matching_view.dart';
+import '../modules/panchang/bindings/panchang_binding.dart';
+import '../modules/panchang/views/panchang_view.dart';
 
 part 'app_routes.dart';
 
@@ -50,6 +54,16 @@ class AppPages {
       name: _Paths.CALENDAR,
       page: () => CalendarView(),
       binding: CalendarBinding(),
+    ),
+    GetPage(
+      name: _Paths.PANCHANG,
+      page: () => PanchangView(),
+      binding: PanchangBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHAUGHADIYA,
+      page: () => ChaughadiyaView(),
+      binding: ChaughadiyaBinding(),
     ),
   ];
 }
