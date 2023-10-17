@@ -21,15 +21,15 @@ class CalendarController extends GetxController {
   ].obs;
 
   final List<MyColor> myBgColors = <MyColor>[
-     MyColor(color: Color(0xFFFF6F00), name: "Orang"),
-     MyColor(color: Color(0xFFFF0000  ), name: "name"),
-     MyColor(color: Color(0xFFFF6F00), name: "name"),
-     MyColor(color: Color(0xFFFF0000), name: "name"),
-     MyColor(color: Color(0xFFFF6F00), name: "name"),
-     MyColor(color: Color(0xFFFF0000), name: "name"),
-     MyColor(color: Color(0xFFFF6F00), name: "Orang"),
-     MyColor(color: Color(0xFFFF0000), name: "name"),
-     MyColor(color: Color(0xFFFF6F00), name: "name"),
+     MyColor(color: Color(0xFFFF9933), name: "Orang"),
+     MyColor(color: Color(0xFFFFCC66), name: "name"),
+     MyColor(color: Color(0xFFFF9933), name: "name"),
+     MyColor(color: Color(0xFFFFCC66), name: "name"),
+     MyColor(color: Color(0xFFFF9933), name: "name"),
+     MyColor(color: Color(0xFFFFCC66), name: "name"),
+     MyColor(color: Color(0xFFFF9933), name: "Orang"),
+     MyColor(color: Color(0xFFFFCC66), name: "name"),
+     MyColor(color: Color(0xFFFF9933), name: "name"),
   ];
 
   @override

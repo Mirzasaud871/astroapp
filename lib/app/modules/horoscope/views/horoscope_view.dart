@@ -56,7 +56,7 @@ class HoroscopeView extends GetView<HoroscopeController> {
                                 ),
                                 margin: const EdgeInsets.all(02.0),
                                 child: Image.asset(
-                                  horoscopeController.horoscopeList[index].image,
+                                  horoscopeController.horoscopeList[index].image,color: Colors.orange,
                                 )),
                             Padding(
                               padding: const EdgeInsets.only(
