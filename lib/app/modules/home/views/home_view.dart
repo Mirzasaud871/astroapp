@@ -45,9 +45,10 @@ class HomeView extends GetView<HomeController> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: Get.width * 0.03,),
                 Container(
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey.shade400),
+                    border: Border.all(color: Colors.black,width: 2),
                     borderRadius: BorderRadius.circular(10.0)
                   ),
                   margin: EdgeInsets.all(4.0),
@@ -91,76 +92,34 @@ class HomeView extends GetView<HomeController> {
                       },
                       child: Container(
                           margin: EdgeInsets.all(2.0),
-                          padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                          height: Get.width * .36,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade400)
-                        ),
-                        child: Stack(
-                                   children: [
-                                         Align(
-                                             alignment: Alignment.topCenter,
-                                             child: Image.asset("assets/images/icons/ic_kundli.png",height: 80)),
-                                         Align(
-                                           alignment: Alignment.bottomCenter,
-                                           child: Text("जन्म कुंडली",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                                         )
-                                       ],
-                                     )),
+                          height: Get.width * .26,
+                        child: Center(child: Image.asset("assets/images/icons/1.jpg"))),
                     ),
                   ),
-                  Expanded(
-                    flex: 1,
-                    child: InkWell(
-                      onTap: (){
-                        Get.toNamed("/matching");
-                      },
-                      child: Container(
-                          margin: EdgeInsets.all(2.0),
-                          padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                          height: Get.width * .36,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade400)
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                  alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/ic_match.png",height: 80,color: Colors.orange,)),
-                              Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Text("कुंडली मिलान",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                              )
-                            ],
-                          )),
+                    Expanded(
+                      flex: 1,
+                      child: InkWell(
+                        onTap: (){
+                          Get.toNamed("/matching");
+                        },
+                        child: Container(
+                            margin: EdgeInsets.all(2.0),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/2.jpg"))),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                  flex: 1,
-                    child: InkWell(
-                      onTap: (){
-                        Get.toNamed("");
-                      },
-                      child: Container(
-                        margin: EdgeInsets.all(2.0),
-                          padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                          height: Get.width * .36,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade400)
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                  alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/ic_prediction.png",height: 80,color: Colors.orange,)),
-                              Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Text("कुंडली PDF",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                              )
-                            ],
-                          )),
+                    Expanded(
+                      flex: 1,
+                      child: InkWell(
+                        onTap: (){
+                          Get.toNamed("/");
+                        },
+                        child: Container(
+                            margin: EdgeInsets.all(2.0),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/3.jpg"))),
+                      ),
                     ),
-                  ),
                 ],),
 
                 //अंक व टैरो ज्योतिष
@@ -170,44 +129,28 @@ class HomeView extends GetView<HomeController> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Container(
-                          margin: EdgeInsets.all(2.0),
-                          padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                          height: Get.width * .36,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade400)
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                  alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/vrat.png",height: 60,color:Colors.orange)),
-                              Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Text("अंक ज्योतिष",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                              )
-                            ],
-                          )),
+                      flex: 1,
+                      child: InkWell(
+                        onTap: (){
+                          Get.toNamed("/");
+                        },
+                        child: Container(
+                            margin: EdgeInsets.all(2.0),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/4.jpg"))),
+                      ),
                     ),
                     Expanded(
-                      child: Container(
-                          margin: EdgeInsets.all(2.0),
-                          padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                          height: Get.width * .36,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade400)
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                  alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/vrat.png",height: 60,color:Colors.orange)),
-                              Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Text("टैरो कार्ड",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                              )
-                            ],
-                          )),
+                      flex: 1,
+                      child: InkWell(
+                        onTap: (){
+                          Get.toNamed("/");
+                        },
+                        child: Container(
+                            margin: EdgeInsets.all(2.0),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/5.jpg"))),
+                      ),
                     ),
                   ],),
 
@@ -225,22 +168,8 @@ class HomeView extends GetView<HomeController> {
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
-                            padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                            height: Get.width * .36,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey.shade400)
-                            ),
-                            child: Stack(
-                              children: [
-                                Align(
-                                    alignment: Alignment.topCenter,
-                                    child: Image.asset("assets/images/icons/ic_asc.png",height: 80,color: Colors.orange,)),
-                                Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Text("पंचांग",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                                )
-                              ],
-                            )),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/6.jpg"))),
                       ),
                     ),
                     Expanded(
@@ -251,22 +180,8 @@ class HomeView extends GetView<HomeController> {
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
-                            padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                            height: Get.width * .36,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey.shade400)
-                            ),
-                            child: Stack(
-                              children: [
-                                Align(
-                                    alignment: Alignment.topCenter,
-                                    child: Image.asset("assets/images/icons/ic_dasa.png",height: 80,color: Colors.orange,)),
-                                Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Text("चौघड़िया",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                                )
-                              ],
-                            )),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/7.jpg"))),
                       ),
                     ),
                     Expanded(
@@ -277,22 +192,8 @@ class HomeView extends GetView<HomeController> {
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
-                            padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                            height: Get.width * .36,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey.shade400)
-                            ),
-                            child: Stack(
-                              children: [
-                                Align(
-                                    alignment: Alignment.topCenter,
-                                    child: Image.asset("assets/images/icons/ic_celebrity.png",height: 80,color: Colors.orange,)),
-                                Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Text("राशिफल",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                                )
-                              ],
-                            )),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/8.jpg"))),
                       ),
                     ),
                   ],),
@@ -304,44 +205,28 @@ class HomeView extends GetView<HomeController> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Container(
-                          margin: EdgeInsets.all(2.0),
-                          padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                          height: Get.width * .36,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade400)
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                  alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/ic_gocharfal.png",height: 60,color:Colors.orange)),
-                              Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Text("ज्योतिष परामर्श ",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                              )
-                            ],
-                          )),
+                      flex: 1,
+                      child: InkWell(
+                        onTap: (){
+                          Get.toNamed("/");
+                        },
+                        child: Container(
+                            margin: EdgeInsets.all(2.0),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/9.jpg"))),
+                      ),
                     ),
                     Expanded(
-                      child: Container(
-                          margin: EdgeInsets.all(2.0),
-                          padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                          height: Get.width * .36,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade400)
-                          ),
-                          child: Stack(
-                            children: [
-                              Align(
-                                  alignment: Alignment.topCenter,
-                                  child: Image.asset("assets/images/icons/ic_gocharfal.png",height: 60,color:Colors.orange)),
-                              Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Text("शुभ मूहर्त",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                              )
-                            ],
-                          )),
+                      flex: 1,
+                      child: InkWell(
+                        onTap: (){
+                          Get.toNamed("/");
+                        },
+                        child: Container(
+                            margin: EdgeInsets.all(2.0),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/10.jpg"))),
+                      ),
                     ),
                   ],),
 
@@ -352,76 +237,39 @@ class HomeView extends GetView<HomeController> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
+                      flex: 1,
                       child: InkWell(
                         onTap: (){
-                          Get.toNamed("/calendar");
+                          Get.toNamed("/");
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
-                            padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                            height: Get.width * .36,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey.shade400)
-                            ),
-                            child: Stack(
-                              children: [
-                                Align(
-                                    alignment: Alignment.topCenter,
-                                    child: Image.asset("assets/images/icons/calendar.png",height: 60,color:Colors.orange)),
-                                Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Text("हिन्दू कैलेंडर",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                                )
-                              ],
-                            )),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/11.jpg"))),
                       ),
                     ),
                     Expanded(
+                      flex: 1,
                       child: InkWell(
+                        onTap: (){
+                          Get.toNamed("/");
+                        },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
-                            padding: EdgeInsets.only(top: 6.0,bottom: 5.0),
-                            height: Get.width * .36,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey.shade400)
-                            ),
-                            child: Stack(
-                              children: [
-                                Align(
-                                    alignment: Alignment.topCenter,
-                                    child: Image.asset("assets/images/icons/vrat.png",height: 60,color:Colors.orange)),
-                                Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Text("व्रत त्यौहार",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,),
-                                )
-                              ],
-                            )),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/12.jpg"))),
                       ),
                     ),
                     Expanded(
+                      flex: 1,
                       child: InkWell(
+                        onTap: (){
+                          Get.toNamed("/");
+                        },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
-                            height: Get.width * .36,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey.shade400)
-                            ),
-                            child: Stack(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 5.0),
-                                  child: Align(
-                                      alignment: Alignment.topCenter,
-                                      child: Image.asset("assets/images/icons/katha.png",height: 60,color: Colors.orange)),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 5.0,),
-                                  child: Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Text("व्रत कथा",style: const TextStyle(fontSize: 14),textAlign: TextAlign.center,))
-                                  ),
-                              ],
-                            )),
+                            height: Get.width * .26,
+                            child: Center(child: Image.asset("assets/images/icons/13.jpg"))),
                       ),
                     ),
                   ],),

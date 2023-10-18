@@ -16,7 +16,7 @@ class ChaughadiyaView extends GetView<ChaughadiyaController> {
           iconTheme: const IconThemeData(color: Colors.black),
           backgroundColor: Colors.white,
           title: const Text(
-            'Chaughadiya',
+            'चोघड़िया',
             style: TextStyle(
                 color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
           ),
@@ -79,7 +79,7 @@ class ChaughadiyaView extends GetView<ChaughadiyaController> {
                               },
                               child: Container(
                                 margin: EdgeInsets.symmetric(horizontal: 15.0),
-                                height: Get.width * 0.15,
+                                height: Get.width * 0.14,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(8.0),
@@ -114,7 +114,7 @@ class ChaughadiyaView extends GetView<ChaughadiyaController> {
                               },
                               child: Container(
                                 margin: EdgeInsets.symmetric(horizontal: 15.0),
-                                height: Get.width * 0.15,
+                                height: Get.width * 0.14,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
@@ -126,7 +126,7 @@ class ChaughadiyaView extends GetView<ChaughadiyaController> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.only(
-                                          top: 8.0, left: 5.0),
+                                          top: 5.0, left: 5.0),
                                       child: Text(
                                         "India",
                                         style: TextStyle(fontSize: 15),
@@ -147,7 +147,7 @@ class ChaughadiyaView extends GetView<ChaughadiyaController> {
                               },
                               child: Container(
                                 margin: EdgeInsets.symmetric(horizontal: 15.0),
-                                height: Get.width * 0.15,
+                                height: Get.width * 0.14,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                     color: Colors.white,

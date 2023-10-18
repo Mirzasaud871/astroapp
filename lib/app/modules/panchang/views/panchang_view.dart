@@ -17,7 +17,7 @@ class PanchangView extends GetView<PanchangController> {
           iconTheme: const IconThemeData(color: Colors.black),
           backgroundColor: Colors.white,
           title: const Text(
-            'Panchang',
+            'पंचांग',
             style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),
           ),
           actions: const [
@@ -63,7 +63,7 @@ class PanchangView extends GetView<PanchangController> {
                       },
                       child: Container(
                         margin: EdgeInsets.symmetric(horizontal: 15.0),
-                        height: Get.width * 0.15,
+                        height: Get.width * 0.14,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(8.0),
@@ -87,50 +87,40 @@ class PanchangView extends GetView<PanchangController> {
                         ),
                       ),
                     ),
-                    SizedBox(height: Get.width * 0.02,),
-                    InkWell(
-                      onTap: (){
-                        panchangController.ChooseDate();
-                      },
-                      child: Container(
-                        margin: EdgeInsets.symmetric(horizontal: 15.0),
-                        height: Get.width * 0.15,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(color: Colors.grey.shade400,width: 1.5)
-                        ),
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 5.0),
-                              child: Text("India",style: TextStyle(fontSize: 15),),
-                            ),
-                            Spacer(),
-                            Icon(Icons.keyboard_arrow_down_rounded)
-                          ],
-                        ),
+                    SizedBox(height: Get.width * 0.03,),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 15.0),
+                      height: Get.width * 0.14,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(8.0),
+                          border: Border.all(color: Colors.grey.shade400,width: 1.5)
+                      ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5.0, left: 5.0),
+                            child: Text("India",style: TextStyle(fontSize: 15),),
+                          ),
+                          Spacer(),
+                          Icon(Icons.keyboard_arrow_down_rounded)
+                        ],
                       ),
                     ),
-                    SizedBox(height: Get.width * 0.02,),
-                    InkWell(
-                      onTap: (){
-                        panchangController.ChooseDate();
-                      },
-                      child: Container(
-                        margin: EdgeInsets.symmetric(horizontal: 15.0),
-                        height: Get.width * 0.15,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(color: Colors.grey.shade400,width: 1.5)
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 8.0, left: 5.0),
-                          child: Text("Ujjain madhya pradesh,india",style: TextStyle(fontSize: 15),),
-                        ),
+                    SizedBox(height: Get.width * 0.03,),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 15.0),
+                      height: Get.width * 0.14,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(8.0),
+                          border: Border.all(color: Colors.grey.shade400,width: 1.5)
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8.0, left: 5.0),
+                        child: Text("Ujjain madhya pradesh,india",style: TextStyle(fontSize: 15),),
                       ),
                     ),
 

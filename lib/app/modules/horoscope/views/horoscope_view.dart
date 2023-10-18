@@ -19,10 +19,10 @@ class HoroscopeView extends GetView<HoroscopeController> {
                 color: Colors.black,
               )),
           title: const Text(
-            'Horoscope',
+            'राशिफल',
             style: TextStyle(color: Colors.black, fontSize: 20),
           ),
-          centerTitle: true,
+
         ),
         body: SafeArea(
           child: SingleChildScrollView(
@@ -51,12 +51,15 @@ class HoroscopeView extends GetView<HoroscopeController> {
                               width: 110,
                                 height: 110,
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.orange,width: 1),
-                                  borderRadius: BorderRadius.circular(06.0)
+                                  border: Border.all(color: Color(0xFFFFBB52),width: 2),
+                                  borderRadius: BorderRadius.circular(100.0)
                                 ),
-                                margin: const EdgeInsets.all(02.0),
-                                child: Image.asset(
-                                  horoscopeController.horoscopeList[index].image,color: Colors.orange,
+                                margin: const EdgeInsets.all(03.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(100.0),
+                                  child: Image.asset(
+                                    horoscopeController.horoscopeList[index].image,
+                                  ),
                                 )),
                             Padding(
                               padding: const EdgeInsets.only(

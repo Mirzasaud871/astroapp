@@ -6,18 +6,18 @@ class HoroscopeController extends GetxController {
   final count = 0.obs;
 
   var horoscopeList = <HoroscopeList>[
-    HoroscopeList(image: "assets/images/horoicons/aquarius.png", name: "Aquarius", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/aries.png", name: "Aries", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/cancer.png", name: "Cancer", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/capricorn.png", name: "Capricorn", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/leo.png", name: "Leo", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/gemini.png", name: "Gemini", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/libra.png", name: "Libra", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/pisces.png", name: "Pisces", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/sagittarius.png", name: "Sagittarius", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/scorpio.png", name: "Scorpio", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/taurus.png", name: "Taurus", route: ""),
-    HoroscopeList(image: "assets/images/horoicons/virgo.png", name: "Virgo", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab8f5fd12.png", name: "मेष", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab9cd0830.png", name: "वृषभ", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab839f86a.png", name: "मिथुन", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab7cebea1.png", name: "कर्क", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab747719c.png", name: "सिंह", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab6d36f80.png", name: "Gemini", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab6648ffd.png", name: "Libra", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab6097c0e.png", name: "Pisces", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab568a542.png", name: "Sagittarius", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab4d75e6e.png", name: "Scorpio", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab46a62a3.png", name: "Taurus", route: ""),
+    HoroscopeList(image: "assets/images/horoicons/2023-09-25-6511ab15befbc.png", name: "Virgo", route: ""),
   ];
   @override
   void onInit() {
