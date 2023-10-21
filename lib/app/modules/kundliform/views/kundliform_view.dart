@@ -20,7 +20,7 @@ class KundliformView extends GetView<KundliformController> {
             )),
         title: const Text(
           'कुण्डली',
-          style: TextStyle(color: Colors.black, fontSize: 18),
+          style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold),
         ),
         actions: [
           const Padding(
@@ -74,7 +74,8 @@ class KundliformView extends GetView<KundliformController> {
                         height: 40,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(color: Colors.white, width: 2)),
+                            color: Colors.white
+                        ),
                         width: double.infinity,
                         child: TextFormField(
                           decoration: const InputDecoration(
@@ -85,39 +86,112 @@ class KundliformView extends GetView<KundliformController> {
                       const SizedBox(
                         height: 15,
                       ),
-                      
-                      const Text(
-                        "जन्म तारीख",
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold
+
+                        const Text(
+                          "जन्म तारीख",
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 5),
-                      InkWell(
-                        onTap: () {
-                          kundliformController.ChooseDate();
-                        },
-                        child: Container(
-                          height: 40,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(color: Colors.white, width: 2)),
-                          child: Obx(() => Padding(
-                            padding: const EdgeInsets.only(top: 4.0, left: 5.0),
-                            child: Text(
-                              DateFormat("dd-MM-yyyy")
-                                  .format(
-                                  kundliformController.selectedDate.value)
-                                  .toString(),
-                              style: const TextStyle(
-                                fontSize: 15,
+                        Row(
+                          children: [
+                            Obx( () => Expanded(
+                              flex: 1,
+                              child: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8.0)
+                                ),
+                                child: DropdownButton(
+                                  menuMaxHeight: 300.0,
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  underline:SizedBox(),
+                                  isExpanded:true,
+                                  onChanged: (newValue) {
+                                    kundliformController.upDaySelected(newValue);
+                                  },
+                                  value: kundliformController.selectedDay.value,
+                                  items: kundliformController.dropdownListD.map((selectedType) {
+                                    return DropdownMenuItem(
+                                      child: new Text(
+                                        selectedType,
+                                      ),
+                                      value: selectedType,
+                                    );
+                                  }).toList(),
+                                ),
                               ),
+                            )
                             ),
-                          )),
+                            SizedBox(width: 6,),
+                            Obx( () => Expanded(
+                              flex: 1,
+                              child: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(8.0)
+                                ),
+                                child: DropdownButton(
+                                  menuMaxHeight: 300.0,
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  underline:SizedBox(),
+                                  isExpanded:true,
+                                  onChanged: (newValue) {
+                                    kundliformController.upMonthSelected(newValue);
+                                  },
+                                  value: kundliformController.selectedMonth.value,
+                                  items: kundliformController.dropdownListM.map((selectedType) {
+                                    return DropdownMenuItem(
+                                      child: new Text(
+                                        selectedType,
+                                      ),
+                                      value: selectedType,
+                                    );
+                                  }).toList(),
+                                ),
+                              ),
+                            )
+                            ),
+                            SizedBox(width: 6,),
+                            Obx( () => Expanded(
+                              flex: 1,
+                              child: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(8.0)
+                                ),
+                                child: DropdownButton(
+                                  menuMaxHeight: 300.0,
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  underline:SizedBox(),
+                                  isExpanded:true,
+                                  onChanged: (newValue) {
+                                    kundliformController.upYearSelected(newValue);
+                                  },
+                                  value: kundliformController.selectedYear.value,
+                                  items: kundliformController.dropdownListY.map((selectedType) {
+                                    return DropdownMenuItem(
+                                      child: new Text(
+                                        selectedType,
+                                      ),
+                                      value: selectedType,
+                                    );
+                                  }).toList(),
+                                ),
+                              ),
+                            )
+                            ),
+                          ],
                         ),
-                      ),
+
+                      //
                       const SizedBox(
                         height: 15,
                       ),
@@ -140,7 +214,7 @@ class KundliformView extends GetView<KundliformController> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(color: Colors.white, width: 2)),
+                            color: Colors.white,),
                           child: Obx(() => Padding(
                             padding: const EdgeInsets.only(top: 4.0, left: 5.0),
                             child: Text(
@@ -171,7 +245,7 @@ class KundliformView extends GetView<KundliformController> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(color: Colors.white, width: 2)),
+                            color: Colors.white,),
                           child: const Padding(
                             padding: EdgeInsets.only(top: 4.0, left: 5.0),
                             child: Row(
@@ -194,7 +268,7 @@ class KundliformView extends GetView<KundliformController> {
                         width: double.infinity,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(color: Colors.white, width: 2)),
+                          color: Colors.white,),
                         child: const Padding(
                           padding: EdgeInsets.only(top: 4.0, left: 5.0),
                           child: Text(

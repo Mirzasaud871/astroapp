@@ -22,7 +22,7 @@ class MatchingView extends GetView<MatchingController> {
         backgroundColor: Colors.white,
         title: const Text(
           'कुण्डली मिलान',
-          style: TextStyle(color: Colors.black, fontSize: 18),
+          style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold),
         ),
         actions: const [
           Padding(
@@ -77,8 +77,7 @@ class MatchingView extends GetView<MatchingController> {
                             height: 40,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
-                                border:
-                                    Border.all(color: Colors.white, width: 2)),
+                                color: Colors.white,),
                             width: double.infinity,
                             child: TextFormField(
                               decoration: const InputDecoration(
@@ -98,32 +97,103 @@ class MatchingView extends GetView<MatchingController> {
                             ),
                           ),
                           const SizedBox(height: 5),
-                          InkWell(
-                            onTap: () {
-                              matchingController.ChooseDate();
-                            },
-                            child: Container(
-                              height: 40,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                      color: Colors.white, width: 2)),
-                              child: Obx(() => Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 4.0, left: 5.0),
-                                    child: Text(
-                                      DateFormat("dd-MM-yyyy")
-                                          .format(matchingController
-                                              .selectedDate.value)
-                                          .toString(),
-                                      style: const TextStyle(
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                  )),
-                            ),
+                          Row(
+                            children: [
+                              Obx( () => Expanded(
+                                flex: 1,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8.0)
+                                  ),
+                                  child: DropdownButton(
+                                    menuMaxHeight: 300.0,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    underline:SizedBox(),
+                                    isExpanded:true,
+                                    onChanged: (newValue) {
+                                      matchingController.upDaySelected(newValue);
+                                    },
+                                    value: matchingController.selectedDay.value,
+                                    items: matchingController.dropdownListD.map((selectedType) {
+                                      return DropdownMenuItem(
+                                        child: new Text(
+                                          selectedType,
+                                        ),
+                                        value: selectedType,
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              )
+                              ),
+                              SizedBox(width: 6,),
+                              Obx( () => Expanded(
+                                flex: 1,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8.0)
+                                  ),
+                                  child: DropdownButton(
+                                    menuMaxHeight: 300.0,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    underline:SizedBox(),
+                                    isExpanded:true,
+                                    onChanged: (newValue) {
+                                      matchingController.upMonthSelected(newValue);
+                                    },
+                                    value: matchingController.selectedMonth.value,
+                                    items: matchingController.dropdownListM.map((selectedType) {
+                                      return DropdownMenuItem(
+                                        child: new Text(
+                                          selectedType,
+                                        ),
+                                        value: selectedType,
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              )
+                              ),
+                              SizedBox(width: 6,),
+                              Obx( () => Expanded(
+                                flex: 1,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8.0)
+                                  ),
+                                  child: DropdownButton(
+                                    menuMaxHeight: 300.0,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    underline:SizedBox(),
+                                    isExpanded:true,
+                                    onChanged: (newValue) {
+                                      matchingController.upYearSelected(newValue);
+                                    },
+                                    value: matchingController.selectedYear.value,
+                                    items: matchingController.dropdownListY.map((selectedType) {
+                                      return DropdownMenuItem(
+                                        child: new Text(
+                                          selectedType,
+                                        ),
+                                        value: selectedType,
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              )
+                              ),
+                            ],
                           ),
+
                           const SizedBox(
                             height: 15,
                           ),
@@ -146,8 +216,7 @@ class MatchingView extends GetView<MatchingController> {
                               width: double.infinity,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                      color: Colors.white, width: 2)),
+                                color: Colors.white,),
                               child: Obx(() => Padding(
                                     padding: const EdgeInsets.only(
                                         top: 4.0, left: 5.0),
@@ -179,7 +248,7 @@ class MatchingView extends GetView<MatchingController> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
-                                border: Border.all(color: Colors.white, width: 2)),
+                              color: Colors.white,),
                             child: const Padding(
                               padding: EdgeInsets.only(top: 4.0, left: 5.0),
                               child: Row(
@@ -202,8 +271,7 @@ class MatchingView extends GetView<MatchingController> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
-                                border:
-                                    Border.all(color: Colors.white, width: 2)),
+                              color: Colors.white,),
                             child: const Padding(
                               padding: EdgeInsets.only(top: 4.0, left: 5.0),
                               child: Text(
@@ -237,8 +305,7 @@ class MatchingView extends GetView<MatchingController> {
                             height: 40,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
-                                border:
-                                    Border.all(color: Colors.white, width: 2)),
+                              color: Colors.white,),
                             width: double.infinity,
                             child: TextFormField(
                               decoration: const InputDecoration(
@@ -258,32 +325,103 @@ class MatchingView extends GetView<MatchingController> {
                             ),
                           ),
                           const SizedBox(height: 5),
-                          InkWell(
-                            onTap: () {
-                              matchingController.ChooseDate();
-                            },
-                            child: Container(
-                              height: 40,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                      color: Colors.white, width: 2)),
-                              child: Obx(() => Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 4.0, left: 5.0),
-                                    child: Text(
-                                      DateFormat("dd-MM-yyyy")
-                                          .format(matchingController
-                                              .selectedDate.value)
-                                          .toString(),
-                                      style: const TextStyle(
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                  )),
-                            ),
+                          Row(
+                            children: [
+                              Obx( () => Expanded(
+                                flex: 1,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8.0)
+                                  ),
+                                  child: DropdownButton(
+                                    menuMaxHeight: 300.0,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    underline:SizedBox(),
+                                    isExpanded:true,
+                                    onChanged: (newValue) {
+                                      matchingController.upDaySelected(newValue);
+                                    },
+                                    value: matchingController.selectedDay.value,
+                                    items: matchingController.dropdownListD.map((selectedType) {
+                                      return DropdownMenuItem(
+                                        child: new Text(
+                                          selectedType,
+                                        ),
+                                        value: selectedType,
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              )
+                              ),
+                              SizedBox(width: 6,),
+                              Obx( () => Expanded(
+                                flex: 1,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8.0)
+                                  ),
+                                  child: DropdownButton(
+                                    menuMaxHeight: 300.0,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    underline:SizedBox(),
+                                    isExpanded:true,
+                                    onChanged: (newValue) {
+                                      matchingController.upMonthSelected(newValue);
+                                    },
+                                    value: matchingController.selectedMonth.value,
+                                    items: matchingController.dropdownListM.map((selectedType) {
+                                      return DropdownMenuItem(
+                                        child: new Text(
+                                          selectedType,
+                                        ),
+                                        value: selectedType,
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              )
+                              ),
+                              SizedBox(width: 6,),
+                              Obx( () => Expanded(
+                                flex: 1,
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 2.0,vertical: 1.0),
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(8.0)
+                                  ),
+                                  child: DropdownButton(
+                                    menuMaxHeight: 300.0,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    underline:SizedBox(),
+                                    isExpanded:true,
+                                    onChanged: (newValue) {
+                                      matchingController.upYearSelected(newValue);
+                                    },
+                                    value: matchingController.selectedYear.value,
+                                    items: matchingController.dropdownListY.map((selectedType) {
+                                      return DropdownMenuItem(
+                                        child: new Text(
+                                          selectedType,
+                                        ),
+                                        value: selectedType,
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              )
+                              ),
+                            ],
                           ),
+
                           const SizedBox(
                             height: 15,
                           ),
@@ -306,8 +444,7 @@ class MatchingView extends GetView<MatchingController> {
                               width: double.infinity,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                      color: Colors.white, width: 2)),
+                                color: Colors.white,),
                               child: Obx(() => Padding(
                                     padding: const EdgeInsets.only(
                                         top: 4.0, left: 5.0),
@@ -339,7 +476,7 @@ class MatchingView extends GetView<MatchingController> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
-                                border: Border.all(color: Colors.white, width: 2)),
+                              color: Colors.white,),
                             child: const Padding(
                               padding: EdgeInsets.only(top: 4.0, left: 5.0),
                               child: Row(
@@ -362,8 +499,7 @@ class MatchingView extends GetView<MatchingController> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
-                                border:
-                                    Border.all(color: Colors.white, width: 2)),
+                              color: Colors.white,),
                             child: const Padding(
                               padding: EdgeInsets.only(top: 4.0, left: 5.0),
                               child: Text(

@@ -27,6 +27,8 @@ flutter:
     - assets/images/
     - assets/images/icons/
     - assets/images/horoicons/
+    - assets/images/Jyotishparaimage/
+    - assets/images/shubhmuhuratimage/
 
   fonts:
   - family: Poppins

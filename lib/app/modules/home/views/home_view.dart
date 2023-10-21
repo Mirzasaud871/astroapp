@@ -9,11 +9,11 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(
-        backgroundColor: Colors.black,
-      ),
+      // drawer: const Drawer(
+      //   backgroundColor: Colors.black,
+      // ),
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color:Colors.black),
         backgroundColor: Colors.amber ,
         title: const Text(
           'AstroRobo',
@@ -51,7 +51,7 @@ class HomeView extends GetView<HomeController> {
                     border: Border.all(color: Colors.black,width: 2),
                     borderRadius: BorderRadius.circular(10.0)
                   ),
-                  margin: EdgeInsets.all(4.0),
+                  margin: EdgeInsets.all(2.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(9.0),
                     child: CarouselSlider(
@@ -93,7 +93,7 @@ class HomeView extends GetView<HomeController> {
                       child: Container(
                           margin: EdgeInsets.all(2.0),
                           height: Get.width * .26,
-                        child: Center(child: Image.asset("assets/images/icons/1.jpg"))),
+                        child: Center(child: Image.asset("assets/images/icons/22.jpg"))),
                     ),
                   ),
                     Expanded(
@@ -105,7 +105,7 @@ class HomeView extends GetView<HomeController> {
                         child: Container(
                             margin: EdgeInsets.all(2.0),
                             height: Get.width * .26,
-                            child: Center(child: Image.asset("assets/images/icons/2.jpg"))),
+                            child: Center(child: Image.asset("assets/images/icons/23.jpg"))),
                       ),
                     ),
                     Expanded(
@@ -117,7 +117,7 @@ class HomeView extends GetView<HomeController> {
                         child: Container(
                             margin: EdgeInsets.all(2.0),
                             height: Get.width * .26,
-                            child: Center(child: Image.asset("assets/images/icons/3.jpg"))),
+                            child: Center(child: Image.asset("assets/images/icons/24.jpg"))),
                       ),
                     ),
                 ],),
@@ -169,7 +169,7 @@ class HomeView extends GetView<HomeController> {
                         child: Container(
                             margin: EdgeInsets.all(2.0),
                             height: Get.width * .26,
-                            child: Center(child: Image.asset("assets/images/icons/6.jpg"))),
+                            child: Center(child: Image.asset("assets/images/icons/26.jpg"))),
                       ),
                     ),
                     Expanded(
@@ -181,7 +181,7 @@ class HomeView extends GetView<HomeController> {
                         child: Container(
                             margin: EdgeInsets.all(2.0),
                             height: Get.width * .26,
-                            child: Center(child: Image.asset("assets/images/icons/7.jpg"))),
+                            child: Center(child: Image.asset("assets/images/icons/27.jpg"))),
                       ),
                     ),
                     Expanded(
@@ -193,7 +193,7 @@ class HomeView extends GetView<HomeController> {
                         child: Container(
                             margin: EdgeInsets.all(2.0),
                             height: Get.width * .26,
-                            child: Center(child: Image.asset("assets/images/icons/8.jpg"))),
+                            child: Center(child: Image.asset("assets/images/icons/28.jpg"))),
                       ),
                     ),
                   ],),
@@ -208,19 +208,19 @@ class HomeView extends GetView<HomeController> {
                       flex: 1,
                       child: InkWell(
                         onTap: (){
-                          Get.toNamed("/");
+                          Get.toNamed("/jyotish-paramarsh");
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
                             height: Get.width * .26,
-                            child: Center(child: Image.asset("assets/images/icons/9.jpg"))),
+                            child: Center(child:Image.asset("assets/images/icons/9.jpg"))),
                       ),
                     ),
                     Expanded(
                       flex: 1,
                       child: InkWell(
                         onTap: (){
-                          Get.toNamed("/");
+                          Get.toNamed("/shubh-muhurat");
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),

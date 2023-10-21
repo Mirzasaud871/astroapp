@@ -11,6 +11,8 @@ abstract class Routes {
   static const CALENDAR = _Paths.CALENDAR;
   static const PANCHANG = _Paths.PANCHANG;
   static const CHAUGHADIYA = _Paths.CHAUGHADIYA;
+  static const JYOTISH_PARAMARSH = _Paths.JYOTISH_PARAMARSH;
+  static const SHUBH_MUHURAT = _Paths.SHUBH_MUHURAT;
 }
 
 abstract class _Paths {
@@ -23,4 +25,6 @@ abstract class _Paths {
   static const CALENDAR = '/calendar';
   static const PANCHANG = '/panchang';
   static const CHAUGHADIYA = '/chaughadiya';
+  static const JYOTISH_PARAMARSH = '/jyotish-paramarsh';
+  static const SHUBH_MUHURAT = '/shubh-muhurat';
 }

@@ -20,16 +20,30 @@ class HoroscopeView extends GetView<HoroscopeController> {
               )),
           title: const Text(
             'राशिफल',
-            style: TextStyle(color: Colors.black, fontSize: 20),
+            style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold),
           ),
-
         ),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(
-                  height:20.0,
+                    height: Get.width * 0.03
+                ),
+                Container(
+                  margin: EdgeInsets.all(10.0),
+                  padding: EdgeInsets.symmetric(horizontal: 12.0,vertical: 5.0),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Color(0xFFFFFBB52),width: 1.5),
+                    borderRadius: BorderRadius.circular(10.0)
+                  ),
+                  width: 350,
+                    child: Text(
+                      "आज का राशिफल देखने के लिए अपने राशि चुनें",
+                      textAlign: TextAlign.center,
+                    )),
+                SizedBox(
+                  height: Get.width * 0.03
                 ),
                 Container(
                   width: double.infinity,
@@ -73,7 +87,7 @@ class HoroscopeView extends GetView<HoroscopeController> {
                                   textAlign: TextAlign.center,
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       );
