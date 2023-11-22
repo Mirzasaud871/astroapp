@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/bottombar/bindings/bottombar_binding.dart';
+import '../modules/bottombar/views/bottombar_view.dart';
 import '../modules/calendar/bindings/calendar_binding.dart';
 import '../modules/calendar/views/calendar_view.dart';
 import '../modules/chaughadiya/bindings/chaughadiya_binding.dart';
@@ -12,6 +14,8 @@ import '../modules/horoscope/bindings/horoscope_binding.dart';
 import '../modules/horoscope/views/horoscope_view.dart';
 import '../modules/jyotish_paramarsh/bindings/jyotish_paramarsh_binding.dart';
 import '../modules/jyotish_paramarsh/views/jyotish_paramarsh_view.dart';
+import '../modules/katha/bindings/katha_binding.dart';
+import '../modules/katha/views/katha_view.dart';
 import '../modules/kundliform/bindings/kundliform_binding.dart';
 import '../modules/kundliform/views/kundliform_view.dart';
 import '../modules/matching/bindings/matching_binding.dart';
@@ -78,6 +82,16 @@ class AppPages {
       name: _Paths.SHUBH_MUHURAT,
       page: () => ShubhMuhuratView(),
       binding: ShubhMuhuratBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOTTOMBAR,
+      page: () => const BottombarView(),
+      binding: BottombarBinding(),
+    ),
+    GetPage(
+      name: _Paths.KATHA,
+      page: () => KathaView(),
+      binding: KathaBinding(),
     ),
   ];
 }

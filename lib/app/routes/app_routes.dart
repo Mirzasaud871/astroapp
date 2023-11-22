@@ -13,6 +13,8 @@ abstract class Routes {
   static const CHAUGHADIYA = _Paths.CHAUGHADIYA;
   static const JYOTISH_PARAMARSH = _Paths.JYOTISH_PARAMARSH;
   static const SHUBH_MUHURAT = _Paths.SHUBH_MUHURAT;
+  static const BOTTOMBAR = _Paths.BOTTOMBAR;
+  static const KATHA = _Paths.KATHA;
 }
 
 abstract class _Paths {
@@ -27,4 +29,6 @@ abstract class _Paths {
   static const CHAUGHADIYA = '/chaughadiya';
   static const JYOTISH_PARAMARSH = '/jyotish-paramarsh';
   static const SHUBH_MUHURAT = '/shubh-muhurat';
+  static const BOTTOMBAR = '/bottombar';
+  static const KATHA = '/katha';
 }

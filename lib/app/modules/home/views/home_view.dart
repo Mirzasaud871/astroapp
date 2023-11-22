@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../katha/views/katha_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -264,7 +265,7 @@ class HomeView extends GetView<HomeController> {
                       flex: 1,
                       child: InkWell(
                         onTap: (){
-                          Get.toNamed("/");
+                          Get.to(KathaView());
                         },
                         child: Container(
                             margin: EdgeInsets.all(2.0),
